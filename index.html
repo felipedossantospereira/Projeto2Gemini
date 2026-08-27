@@ -6,81 +6,8 @@
     <title>Guia de Segurança Digital para Idosos</title>
     <!-- Tailwind CSS CDN para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Estilos base focados em legibilidade para a melhor idade */
-        html {
-            font-size: 18px; /* Fonte base aumentada para leitura confortável */
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Estilização da alternância de Alto Contraste usando apenas CSS (:has e :checked) */
-        body:has(#contrast-toggle:checked) {
-            background-color: #000000 !important;
-            color: #ffffff !important;
-        }
-
-        body:has(#contrast-toggle:checked) .bg-accessible-card {
-            background-color: #121212 !important;
-            border: 3px solid #ffff00 !important;
-            color: #ffffff !important;
-        }
-
-        body:has(#contrast-toggle:checked) .text-accessible-primary {
-            color: #ffff00 !important;
-        }
-
-        body:has(#contrast-toggle:checked) .bg-accessible-button {
-            background-color: #ffff00 !important;
-            color: #000000 !important;
-            font-weight: 800 !important;
-            border: 2px solid #ffffff !important;
-        }
-
-        body:has(#contrast-toggle:checked) .bg-accessible-header {
-            background-color: #1a1a1a !important;
-            border-bottom: 4px solid #ffff00 !important;
-        }
-
-        body:has(#contrast-toggle:checked) .badge-highlight {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-            border: 2px solid #ffff00 !important;
-        }
-
-        body:has(#contrast-toggle:checked) .hero-banner {
-            background: #111111 !important;
-            border: 4px solid #ffff00 !important;
-        }
-
-        /* Customização de expansores nativos <details> e <summary> sem JavaScript */
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        
-        details summary {
-            list-style: none;
-            cursor: pointer;
-        }
-
-        details[open] summary .arrow-icon {
-            transform: rotate(180deg);
-        }
-
-        .arrow-icon {
-            transition: transform 0.2s ease;
-        }
-
-        /* Foco bem visível para navegação por teclado e leitores de tela */
-        a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible, label:focus-visible {
-            outline: 4px solid #f59e0b !important;
-            outline-offset: 4px !important;
-        }
-    </style>
+    <!-- Vinculo para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-900 transition-colors duration-200 min-h-screen flex flex-col">
 
@@ -134,7 +61,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Atendimentos Rápido e Navegação por Módulos -->
         <nav aria-label="Navegação rápida pelos tópicos" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -371,4 +298,21 @@
                     <p class="text-slate-700">Não guarde segredo nem tenha vergonha. Contar para um amigo ou parente ajuda você a resolver o problema com rapidez.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border-2 border
+                <div class="bg-white p-6 rounded-2xl border-2 border-red-200 shadow-sm bg-accessible-card space-y-2">
+                    <span class="bg-red-600 text-white font-black px-3 py-1 rounded-full text-base inline-block">PASSO 3</span>
+                    <h4 class="text-xl font-bold text-slate-900 text-accessible-primary">Registre um Boletim de Ocorrência</h4>
+                    <p class="text-slate-700">Procure a Delegacia de Polícia da sua região ou faça o registro pela internet (Delegacia Eletrônica) para formalizar a denúncia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-6 border-t-4 border-blue-900 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-2">
+            <p class="text-base font-medium">Guia de Segurança Digital e Acessibilidade para Idosos</p>
+            <p class="text-sm text-slate-400">Conteúdo educativo focado na inclusão e proteção digital.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Estilos base focados em legibilidade para a melhor idade */
+html {
+    font-size: 18px; /* Fonte base aumentada para leitura confortável */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilização da alternância de Alto Contraste usando apenas CSS (:has e :checked) */
+body:has(#contrast-toggle:checked) {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body:has(#contrast-toggle:checked) .bg-accessible-card {
+    background-color: #121212 !important;
+    border: 3px solid #ffff00 !important;
+    color: #ffffff !important;
+}
+
+body:has(#contrast-toggle:checked) .text-accessible-primary {
+    color: #ffff00 !important;
+}
+
+body:has(#contrast-toggle:checked) .bg-accessible-button {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
+    border: 2px solid #ffffff !important;
+}
+
+body:has(#contrast-toggle:checked) .bg-accessible-header {
+    background-color: #1a1a1a !important;
+    border-bottom: 4px solid #ffff00 !important;
+}
+
+body:has(#contrast-toggle:checked) .badge-highlight {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body:has(#contrast-toggle:checked) .hero-banner {
+    background: #111111 !important;
+    border: 4px solid #ffff00 !important;
+}
+
+/* Customização de expansores nativos <details> e <summary> sem JavaScript */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details[open] summary .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.arrow-icon {
+    transition: transform 0.2s ease;
+}
+
+/* Foco bem visível para navegação por teclado e leitores de tela */
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible, label:focus-visible {
+    outline: 4px solid #f59e0b !important;
+    outline-offset: 4px !important;
+}
