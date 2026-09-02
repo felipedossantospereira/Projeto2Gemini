@@ -31,3 +31,24 @@ modal.style.display = "block";
 function fechaModal() {
 modal.style.display = "none";
 }
+
+// TAMANHO DE FONTES
+let tamanhoFonteAtual = 16;
+const valorAdicionado = 2;
+const valorSubtraido = 2;
+
+let btnAumentaFonte = document.getElementById("btnAumentaTexto");
+let btnDiminuiFonte = document.getElementById("btnDiminuiTexto");
+
+btnAumentaFonte.addEventListener("click", aumentaFonte);
+btnDiminuiFonte.addEventListener("click", diminuiFonte);
+
+function aumentaFonte() {
+    tamanhoFonteAtual = tamanhoFonteAtual + valorAdicionado;
+    document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+}
+
+function diminuiFonte() {
+    tamanhoFonteAtual = tamanhoFonteAtual - valorSubtraido;
+    document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+}
